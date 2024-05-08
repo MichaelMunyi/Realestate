@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1055083838055",
+    "project_id": "rentisha-cdeab",
+    "storage_bucket": "rentisha-cdeab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055083838055:android:23c1e3490ae5b06dfb32c2",
+        "android_client_info": {
+          "package_name": "com.example.rentisha"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4b_zci36TTMbM21LsSLl5qGx6y2HYxGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
