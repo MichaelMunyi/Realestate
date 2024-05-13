@@ -56,6 +56,7 @@ fun AddHouseScreen(navController:NavHostController){
     ) {
 
 
+
         var productName by remember { mutableStateOf("") }
         var productQuantity by remember { mutableStateOf("") }
         var productPrice by remember { mutableStateOf("") }

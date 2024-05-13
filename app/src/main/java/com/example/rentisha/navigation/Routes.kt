@@ -11,5 +11,8 @@ const val APARTMENT1_URL ="apartment1screen"
 const val APARTMENT2_URL ="apartment2screen"
 const val APARTMENT3_URL ="apartment3screen"
 const val APARTMENT4_URL ="apartment4screen"
+const val CONTENT_URL ="content"
+const val RENTAL1_URL  ="rental1"
+const val LAND_URL ="land1"
 
 

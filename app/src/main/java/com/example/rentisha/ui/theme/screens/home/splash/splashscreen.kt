@@ -37,6 +37,7 @@ import com.example.rentisha.R
 import com.example.rentisha.ui.theme.RentishaTheme
 
 import com.airbnb.lottie.compose.animateLottieCompositionAsState
+import com.example.rentisha.navigation.HOME_URL
 import com.example.rentisha.navigation.LOGIN_URL
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -52,15 +53,18 @@ fun splashscreen(navController: NavHostController) {
                 painterResource(id = R.drawable.background2),
                 contentScale = ContentScale.FillBounds)
             .fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.CenterHorizontally,
+
     ){
+
+
 
         val mContext = LocalContext.current
 
         val courotinescope = rememberCoroutineScope()
         courotinescope.launch{
             delay(2000)
-            mContext.startActivity(Intent(mContext, LOGIN_URL::class.java))
+           navController.navigate(LOGIN_URL)
 
         }
         Text(
@@ -75,7 +79,7 @@ fun splashscreen(navController: NavHostController) {
 
 
         //Lottie Animation
-        val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.rental))
+        val composition by rememberLottieComposition(spec = LottieCompositionSpec.RawRes(R.raw.animation))
         val progress by animateLottieCompositionAsState(composition)
         LottieAnimation(composition, progress,
             modifier = Modifier.size(300.dp)

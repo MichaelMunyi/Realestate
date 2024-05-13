@@ -1,6 +1,5 @@
 package com.example.rentisha.ui.theme.screens.home.apartments
 
-
 import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -11,17 +10,26 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.FavoriteBorder
+import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Place
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
@@ -33,33 +41,42 @@ import androidx.compose.ui.unit.sp
 import androidx.core.net.toUri
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import coil.compose.rememberAsyncImagePainter
 import com.example.rentisha.R
 import com.example.rentisha.ui.theme.RentishaTheme
-import com.example.rentisha.ui.theme.screens.home.login.LoginScreen
+
 
 @Composable
-fun Apartment3(navController: NavHostController) {
+fun Land1(navController: NavHostController) {
 
 
     val mContext = LocalContext.current
 
-    Column(modifier = Modifier
-        .padding(50.dp)
-        .fillMaxSize()) {
+    Column(modifier = Modifier.fillMaxSize()) {
 
         Card {
-            Box {
-                Image(
-                    painter = painterResource(id = R.drawable.apartmmnt1),
-                    contentDescription = "Hotel",
+
+            Box(modifier = Modifier
+                .fillMaxWidth()
+                .height(150.dp),
+                contentAlignment = Alignment.Center) {
+
+                Image(painter = painterResource(id = R.drawable.labn),
+                    contentDescription = "Destination",
                     modifier = Modifier
-                        .padding(
-                            start = 10.dp, end = 10.dp,
+                        .fillMaxSize()
+                        .height(200.dp),
+                    contentScale = ContentScale.Crop)
+
+                Text(
+                    text = "Indulge in unmatched property",
+                    fontSize = 30.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.White,
+
+                    )//end of box
 
 
-                            )
-                )
+
             }
             Column {
                 Row {
@@ -133,21 +150,34 @@ fun Apartment3(navController: NavHostController) {
                 Row {
 
 
+                  Text(text = "Ksh 5,000,000")
+                    Column {
+
+
+
+                    }
+                }
+
+                Row {
+
+
                     Column {
                         IconButton(onClick = { }) {
-                            Icon(imageVector = Icons.Default.Place, contentDescription = "location")
+                            Icon(
+                                imageVector = Icons.Default.LocationOn,
+                                contentDescription = "location"
+                            )
 
 
                         }
                     }
                     Column {
                         Text(
-                            text = "Syokimau",
+                            text = "Kirawa rd",
                             fontSize = 15.sp,
                             fontFamily = FontFamily.Serif,
                             modifier = Modifier.padding(start = 10.dp)
                         )
-
 
                     }
                 }
@@ -167,32 +197,7 @@ fun Apartment3(navController: NavHostController) {
                     }
                     Column {
                         Text(
-                            text = "Master ensuite",
-                            fontSize = 15.sp,
-                            fontFamily = FontFamily.Serif,
-                            modifier = Modifier.padding(start = 10.dp)
-                        )
-
-
-                    }
-                }
-
-                Row {
-
-
-                    Column {
-                        IconButton(onClick = { }) {
-                            Icon(
-                                imageVector = Icons.Default.CheckCircle,
-                                contentDescription = "location"
-                            )
-
-
-                        }
-                    }
-                    Column {
-                        Text(
-                            text = "Fibre Internet",
+                            text = "1/2 Acre",
                             fontSize = 15.sp,
                             fontFamily = FontFamily.Serif,
                             modifier = Modifier.padding(start = 10.dp)
@@ -217,16 +222,22 @@ fun Apartment3(navController: NavHostController) {
                         }
                     }
                     Column {
-                        Text(
-                            text = "Fibre Internet",
-                            fontSize = 15.sp,
-                            fontFamily = FontFamily.Serif,
-                            modifier = Modifier.padding(start = 10.dp)
-                        )
+
 
 
                     }
                 }
+                androidx.compose.material3.Text(
+                    text = "Ready title deeds (Cost is all inclusive)\n" +
+                            "1/8 acres (50 by 100) in size \n" +
+                            "6 months instalment plan, interest free – Get instalment plan\n" +
+                            "20 meters from proposed Malaa- Ketraco tarmac\n" +
+                            "Good all weather access road",
+                    modifier = Modifier
+                        .padding(
+                            start = 50.dp, end = 50.dp
+                        )
+                )
 
 
             }
@@ -235,13 +246,11 @@ fun Apartment3(navController: NavHostController) {
 
     }
 }
-
 @Composable
 @Preview(showBackground = true)
-fun Apartment3Preview() {
+fun Land1Preview() {
     RentishaTheme {
-        Apartment3(navController = rememberNavController())
-
+        Land1(navController = rememberNavController())
     }
-
 }
+

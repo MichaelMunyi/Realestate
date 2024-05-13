@@ -95,7 +95,7 @@ fun ProductItem(
     productRepository: HouseViewModel, productImage:String) {
 
     Column(modifier = Modifier.fillMaxWidth()) {
-        Text(text = name)
+        Text(text = productImage)
         Text(text = location)
         Text(text = price)
         Image(

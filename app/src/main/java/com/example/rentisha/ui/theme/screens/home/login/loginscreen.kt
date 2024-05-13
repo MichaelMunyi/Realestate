@@ -6,12 +6,13 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Email
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextFieldColors
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -68,10 +69,11 @@ fun LoginScreen(navController:NavHostController){
             value = email,
             onValueChange = {email = it},
             label = { Text(text = "Enter email",
-                color = Color.White)},
+                color = Color.White)
+            },
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Email
-            ),
+            ), leadingIcon = { Icon(imageVector = Icons.Default.Email, contentDescription = "Email")},
 
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 Color.White
